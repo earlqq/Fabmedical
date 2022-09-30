@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "fabmedicaleaq-a463"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "fabmedicaleaq-a463"
+  template:
+    metadata:
+      labels:
+        app: "fabmedicaleaq-a463"
+    spec:
+      containers:
+        - name: "fabmedicaleaq-a463"
+          image: "fabmedicaleaq.azurecr.io/fabmedicaleaq"
+          ports:
+          - containerPort: 3001
